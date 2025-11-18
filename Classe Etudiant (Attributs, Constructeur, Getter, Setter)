@@ -1,0 +1,49 @@
+import java.util.Objects;
+
+public class Etudiant {
+	public String cin;
+	public String name;
+	public double moyenne;
+	public String image;
+	public Etudiant(String cin, String name, double moyenne, String image) {
+		super();
+		this.cin = cin;
+		this.name = name;
+		this.moyenne = moyenne;
+		this.image = image;
+	}
+	public String getCin() {
+		return cin;
+	}
+	public void setCin(String cin) {
+		this.cin = cin;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public double getMoyenne() {
+		return moyenne;
+	}
+	public void setMoyenne(Double moyenne) {
+		this.moyenne = moyenne;
+	}
+	public String getImage() {
+		return image;
+	}
+	public void setImage(String image) {
+		this.image = image;
+	}
+	@Override
+	public int hashCode() {
+		return Objects.hash(cin);
+	}
+	@Override
+	public boolean equals(Object obj) {
+		return this.cin == ( (Etudiant)obj).cin;
+	}
+}
+
+
